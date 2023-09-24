@@ -1,0 +1,236 @@
+@import url("https://fonts.cdnfonts.com/css/norse");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --color-button: #596d48;
+  --color-border-button: #e5e7eb;
+  --color-red: #ff4646;
+  --color-blue: #3765ff;
+  --color-text: #4b4b4b;
+  --padding-left: 40px;
+}
+body{
+  background-color: #252525;
+}
+/*======================= 
+   Main Container
+========================*/
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
+
+/*======================= 
+  left side
+========================*/
+
+.left_side {
+  position: relative;
+  height: 100vh;
+}
+
+.left_side img {
+  width: 30vw;
+  height: 100%;
+}
+
+.background-of-logo {
+  position: absolute;
+  display: flex;
+  top: 13rem;
+  background-color: rgba(0, 0, 0, 0.432);
+  width: 100%;
+  height: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-of-logo img {
+  width: 20%;
+  height: 80%;
+}
+
+.background-of-logo h1 {
+  color: var(--color-border-button);
+  font-family: "Norse", sans-serif;
+  font-size: 100px;
+}
+
+/*======================= 
+  right side
+========================*/
+
+.right_side {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*======================= 
+  top 
+========================*/
+.top {
+  padding-left: var(--padding-left);
+  margin-top: 15%;
+}
+
+.right_side h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.right_side h4 {
+  font-size: 25px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+/*======================= 
+  middle
+========================*/
+
+#middle {
+  background-color: #fff;
+  width: 100%;
+  padding: 40px 0;
+  box-shadow: 0px 15px 10px -15px #111;
+  margin-top: 8%;
+
+}
+
+.two_sides_form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: var(--padding-left);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+legend {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: var(--padding-left);
+}
+.label {
+  font-size: 1.5rem;
+}
+input {
+  all: unset;
+  width: 17rem;
+  height: 28px;
+  border: 1px solid #e5e7eb;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 5px;
+  font-size: 15px;
+  text-transform: none;
+  padding: 3px;
+}
+input:focus {
+  border-color: var(--color-blue);
+}
+.valid {
+  border-color: var(--color-red);
+}
+.invalid {
+  border-color: green;
+}
+
+.left_form {
+  margin-right: 5rem;
+}
+.left_form div {
+  margin: 20px 0 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.right_form div {
+  margin: 20px 0 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.password_dont_match {
+  font-size: 0.9rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: var(--color-red);
+  opacity: 0;
+  display: none;
+}
+
+/*======================= 
+  bottem
+========================*/
+.bottem {
+  padding-left: var(--padding-left);
+  margin-top: 40px;
+}
+
+.bottem button{
+  all: unset;
+  padding: 15px 60px;
+  background-color: var(--color-button);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.bottem button:hover{
+    box-shadow: 10px 20px 54px;
+    background-color: white;
+    color: var(--color-button);
+}
+
+.bottem h6{
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-top: 30px;
+}
+
+.bottem h6 a {
+  all: unset;
+  color: var(--color-button);
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.bottem h6 a:hover{
+  color: #2c3622;
+}
+
+/*======================= 
+  media queries
+========================*/
+
+@media screen and (max-width: 700px) {
+  .container{
+    flex-wrap: wrap;
+  }
+  .left_side img  {
+    width: 100% !important;
+  }
+  .background-of-logo img {
+    width: 20% !important;
+    height: 80%;
+  }
+  input{
+    width: 12rem;
+  }
+  .bottem button{
+    width: 4rem;
+  }
+}
