@@ -22,7 +22,9 @@ body{
 .container {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  align-items: stretch;
+  height: 100vh;
+  width: 100vw;
   margin: auto;
 }
 
@@ -30,14 +32,19 @@ body{
   left side
 ========================*/
 
+/* .left_side {
+  position: relative;
+  width: 50vw;
+  height: 100%;
+} */
+
 .left_side {
   position: relative;
-  height: 100vh;
-}
-
-.left_side img {
-  width: 30vw;
-  height: 100%;
+  background-image: url(./images/background.jpg);
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 40vw;
 }
 
 .background-of-logo {
@@ -52,14 +59,13 @@ body{
 }
 
 .background-of-logo img {
-  width: 20%;
-  height: 80%;
+  width: 12%;
 }
 
 .background-of-logo h1 {
   color: var(--color-border-button);
   font-family: "Norse", sans-serif;
-  font-size: 100px;
+  font-size: 6vw;
 }
 
 /*======================= 
@@ -67,10 +73,8 @@ body{
 ========================*/
 
 .right_side {
-  display: flex;
-  flex-direction: column;
   background-color: #f7f7f7;
-  width: 100%;
+  width: 100vw;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -79,7 +83,7 @@ body{
 ========================*/
 .top {
   padding-left: var(--padding-left);
-  margin-top: 15%;
+  padding-top: 50px;
 }
 
 .right_side h3 {
@@ -96,13 +100,13 @@ body{
   middle
 ========================*/
 
-#middle {
+.middle {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
-  width: 100%;
-  padding: 40px 0;
   box-shadow: 0px 15px 10px -15px #111;
-  margin-top: 8%;
-
+  margin-top: 50px;
+  padding: 40px 0;
 }
 
 .two_sides_form {
@@ -220,12 +224,9 @@ input:focus {
   .container{
     flex-wrap: wrap;
   }
-  .left_side img  {
-    width: 100% !important;
-  }
-  .background-of-logo img {
-    width: 20% !important;
-    height: 80%;
+  .left_side{
+    height: 100%;
+    width: 100%;
   }
   input{
     width: 12rem;
@@ -234,3 +235,4 @@ input:focus {
     width: 4rem;
   }
 }
+
