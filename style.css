@@ -32,12 +32,6 @@ body{
   left side
 ========================*/
 
-/* .left_side {
-  position: relative;
-  width: 50vw;
-  height: 100%;
-} */
-
 .left_side {
   position: relative;
   background-image: url(./images/background.jpg);
@@ -220,7 +214,7 @@ input:focus {
   media queries
 ========================*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 950px) {
   .container{
     flex-wrap: wrap;
   }
